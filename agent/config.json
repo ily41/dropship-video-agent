@@ -1,0 +1,73 @@
+{
+  "folders": {
+    "input": "input",
+    "jobs": "jobs",
+    "clips": "clips",
+    "videos": "videos",
+    "product_refs": "references/product"
+  },
+  "categories": [
+    "hooks",
+    "showcases",
+    "payoffs"
+  ],
+  "split": {
+    "scene_threshold": 0.3,
+    "min_clip_seconds": 0.7
+  },
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "crf": 20,
+    "fit": "trim",
+    "max_speed": 1.6
+  },
+  "hook_text": {
+    "font_files": [
+      "C:/Windows/Fonts/arialbd.ttf",
+      "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+      "/Library/Fonts/Arial Bold.ttf",
+      "C:/Windows/Fonts/seguisb.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    ],
+    "style": "outline",
+    "font_size": 76,
+    "max_chars_per_line": 20,
+    "y_ratio": 0.42,
+    "show_for": "all",
+    "stroke_ratio": 0.11
+  },
+  "higgsfield": {
+    "mode": "frame_then_video",
+    "api_base": "https://api.higgsfield.ai",
+    "upload_url_endpoint": "https://platform.higgsfield.ai/files/generate-upload-url",
+    "poll_seconds": 10,
+    "timeout_minutes": 25,
+    "max_product_refs": 3,
+    "frame_model": {
+      "id": "bytedance/seedream/v4/edit",
+      "args": {
+        "prompt": "{image_prompt}",
+        "image_urls": "{reference_urls}",
+        "aspect_ratio": "9:16"
+      }
+    },
+    "video_model": {
+      "id": "kling-video/v2.1/pro/image-to-video",
+      "args": {
+        "prompt": "{video_prompt}",
+        "image_url": "{start_frame_url}",
+        "duration": "{duration}"
+      }
+    },
+    "motion_model": {
+      "id": "higgsfield/genjutsu/motion-transfer/v1.0",
+      "min_source_seconds": 4.0,
+      "args": {
+        "video_url": "{source_clip_url}",
+        "image_urls": "{start_frame_url_list}"
+      }
+    }
+  }
+}

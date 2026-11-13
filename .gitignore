@@ -1,0 +1,15 @@
+# secrets
+agent/.env
+# your media and work files (stay on your computer, never uploaded)
+input/*
+jobs/*
+videos/*
+music/*
+clips/**/*.mp4
+clips/**/*.mov
+references/product/*
+references/characters/*
+!**/.keep
+# python
+__pycache__/
+*.pyc
