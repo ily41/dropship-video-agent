@@ -1,4 +1,4 @@
-# Dropship Video Agent
+﻿# Dropship Video Agent
 
 An AI agent for **Claude Code** that turns product videos into new, ready-to-post short videos for
 organic dropshipping (Instagram Reels, TikTok, Facebook) - using **Higgsfield (Wan 3.0)** to remake
@@ -98,7 +98,7 @@ Each should print a version. Then get the agent:
 
 ```powershell
 cd $HOME\Documents
-git clone https://github.com/<YOUR-GITHUB-NAME>/dropship-video-agent
+git clone https://github.com/ily41/dropship-video-agent
 cd dropship-video-agent
 pip install -r agent\requirements.txt
 ```
@@ -131,7 +131,7 @@ a folder, click **Allow**.
 4. **The agent:**
    ```bash
    cd ~/Documents
-   git clone https://github.com/<YOUR-GITHUB-NAME>/dropship-video-agent
+   git clone https://github.com/ily41/dropship-video-agent
    cd dropship-video-agent
    python3 -m pip install --user -r agent/requirements.txt
    ```
